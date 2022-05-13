@@ -8,6 +8,8 @@ public class GitHubDemo {
 	
 	}
 	
-	
+	public void testGit() {
+		
+	}
 
 }

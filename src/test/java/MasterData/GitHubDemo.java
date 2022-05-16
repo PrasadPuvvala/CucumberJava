@@ -8,7 +8,7 @@ public class GitHubDemo {
 	
 	}
 	
-	public void testGit() {
+	public void testGit1() {
 		
 	}
 

@@ -201,7 +201,7 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'MasterData.Runner_MasterData')
-data.setCell(0, 3, 94058);
+data.setCell(0, 3, 85058);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
@@ -233,18 +233,26 @@ return data;
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
               <div class="chronological-class-name">MasterData.Runner_MasterData</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <span class="method-name">startMethod</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-suite before -->
               <div class="configuration-class before">
                 <span class="method-name">setUpClass</span>
-                <span class="method-start">0 ms</span>
+                <span class="method-start">15 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">runScenario("Check Release Page", "Optional[Releases Page Feature]")</span>
-                <span class="method-start">1338 ms</span>
+                <span class="method-start">490 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">95401 ms</span>
+                <span class="method-start">85551 ms</span>
               </div> <!-- configuration-class after -->
+              <div class="configuration-suite after">
+                <span class="method-name">endMethod</span>
+                <span class="method-start">88343 ms</span>
+              </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

@@ -23,20 +23,20 @@ public abstract class AbstractWebDriver
 	static WebDriver driver;
 	static WebDriverWait wait;
 	
-	protected static WebDriver initiate() throws InterruptedException, IOException
+	public static WebDriver initiate() throws InterruptedException, IOException
 	{
 	    ReadExcel  excelObj= new ReadExcel();
 	    String str[][]=excelObj.readExcel();
 
 		
 		System.setProperty("webdriver.chrome.driver",
-				"E://SeleniumAutomation//chromedriver100.0.4896//chromedriver.exe");
+				"E://SeleniumAutomation//chromedriver102.0.5005.63//chromedriver.exe");
 		// Creating an object of ChromeDriver
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		wait = new WebDriverWait(driver, 40);
 
-		ExtentCucumberAdapter.addTestStepLog("+++AbstractdriverSetup is successful+++");
+	//	ExtentCucumberAdapter.addTestStepLog("+++AbstractdriverSetup is successful+++");
 
 		driver.get("https://tstpreferences.gnodinservices.com/");
 		// explicit wait - to wait for the compose button to be click-able

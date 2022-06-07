@@ -6,7 +6,9 @@
       <class name="MasterData.Runner_MasterData">
         <methods>
           <include name="runScenario" invocation-numbers="0"/>
+          <include name="endMethod"/>
           <include name="tearDownClass"/>
+          <include name="startMethod"/>
           <include name="setUpClass"/>
         </methods>
       </class> <!-- MasterData.Runner_MasterData -->

@@ -71,6 +71,9 @@ public class MasterData extends AbstractWebDriver implements TestInterface {
 			ExtentCucumberAdapter.getCurrentStep();
 
 			ExtentCucumberAdapter.addTestStepLog("Current Action Passed : " + text1);
+			
+			Assert.assertTrue(text1, true);
+
 		} catch (AssertionError e) {
 
 			Assert.assertFalse(text1, false);
@@ -137,20 +140,7 @@ public class MasterData extends AbstractWebDriver implements TestInterface {
 
 		Thread.sleep(2000);
 
-		// driver.findElement(By.xpath("//*[@id=\"mat-tab-content-2-0\"]/div/mat-form-field[4]/div/div[1]")).click();
-		// driver.findElement(By.xpath("//*/div/input[@id='mat-input-21']")).click();
-
-		// System.out.println(driver.findElement(By.xpath("//*[@id=\"mat-option-764\"]/span")).getText());
-
-		// driver.findElement(By.xpath("//*[@id=\"cdk-describedby-message-22\"]")).click();
-		// System.out.println("PDM Manager is "+
-		// driver.findElement(By.xpath("//*/div/input[@id='mat-input-13']")).getText());
-		//
-		// driver.findElement(By.xpath("//*/app-programs-list/div[2]/div/table/tbody/tr[1]/td[10]/button[1]")).click();
-		//
-		// System.out.println("Project Manager Manager is "+
-		// driver.findElement(By.xpath("//*/div/input[@id='mat-input-12']")).getText());
-
+		
 	}
 
 	@And("click on submit")
@@ -244,8 +234,24 @@ public class MasterData extends AbstractWebDriver implements TestInterface {
 
 		Thread.sleep(2000);
 
+//		driver.findElement(By.xpath("//*/div/input[@id='mat-input-0']")).sendKeys("Rubneium");
+		
+		
+		// Getting details for mentioned release
+		
 		driver.findElement(By.xpath("//*/div/input[@id='mat-input-0']")).sendKeys("Rubneium");
+		
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*/div/input[@id='mat-input-0']")));
 
+		String date= driver.findElement(By.xpath("//*/table/tbody/tr[1]/td[6]")).getText();
+		String PM= driver.findElement(By.xpath("//*/table/tbody/tr[1]/td[7]")).getText();
+		String PDM = driver.findElement(By.xpath("//*/table/tbody/tr[1]/td[8]")).getText();
+
+		ExtentCucumberAdapter.addTestStepLog("Date for created Program Rubneium : " + date);
+		ExtentCucumberAdapter.addTestStepLog("PM name for Rubneium :" +PM);
+		ExtentCucumberAdapter.addTestStepLog("PDM for the Rubneium program :" +PDM);
+
+		
 		// Delete release
 		Thread.sleep(4000);
 		driver.findElement(

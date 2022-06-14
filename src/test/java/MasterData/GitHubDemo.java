@@ -63,6 +63,8 @@ public class GitHubDemo {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*/div/mat-nav-list/a[2]")));
 		driver.findElement(By.xpath("//*/div/mat-nav-list/a[2]")).click();
 		Assert.assertEquals("Pass", "TEXT", "TEXT");
+		
+
 
 		
 

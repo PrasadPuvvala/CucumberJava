@@ -34,7 +34,7 @@ public class GitHubDemo {
 	public GitHubDemo() 
 	{
 		// TODO Auto-generated constructor stub
-	  age=age+1;	
+	  age=age+2;	
 	
 	}
 	

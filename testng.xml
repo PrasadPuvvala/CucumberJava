@@ -6,8 +6,6 @@
 			<class name="MasterData.Runner_MasterData">
 			</class>
             <!--class name="StepDefinition.TestRunner"-->
-			
-            
-		</classes>
+			</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
